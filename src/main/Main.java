@@ -11,6 +11,7 @@ public class Main
        
         System.out.println("Inheritance test \n");
         random.drawCard(4);
+        System.out.println("\n");
     
         System.out.println("Composition test \n"); 
         try
