@@ -21,13 +21,11 @@ public class InheritanceRandom extends Random
         int noSuits = 4;
 
         int index = 0;
-
         StringBuilder sb = new StringBuilder();
 
         for (int i = 0; i < count; i++)
         {
             boolean seenCard = true;
-
             while(seenCard)
             {
                 index = nextInt(noColors);
@@ -50,8 +48,6 @@ public class InheritanceRandom extends Random
                 }
             }
         }
-
-
     }
 }
 
