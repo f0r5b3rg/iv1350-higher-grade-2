@@ -2,16 +2,17 @@ package implementation;
 import java.util.Random;
 import java.util.HashSet;
 
-public class InheritanceRandom extends Random
+public class CompositionRandom
 {
+    private final Random random;
     private final String[] ranks = {"2", "3", "4","5", "6", "7", "8", "9", "10", "J", "Q", "K", "A"};
     private final String[] suits = {"Black Spades", "Red Hearts", "Red Diamonds", "Black Clubs"};
     private final int noRanks = ranks.length;
     private final int noSuits = suits.length;
 
-    public InheritanceRandom()
+    public CompositionRandom()
     {
-        super();
+        this.random = new Random();
     }
 
     public void drawCard(int count)
@@ -29,10 +30,10 @@ public class InheritanceRandom extends Random
         {
             while(true)
             {
-                index = nextInt(noSuits);
+                index = random.nextInt(noSuits);
                 sb.append(suits[index]).append(" ");
 
-                index = nextInt(noRanks);
+                index = random.nextInt(noRanks);
                 sb.append(ranks[index]);
 
                 String card = sb.toString();
@@ -47,4 +48,3 @@ public class InheritanceRandom extends Random
         }
     }
 }
-
